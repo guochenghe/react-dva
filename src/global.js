@@ -4,5 +4,6 @@
 import {setAxios} from './utils/request'
 //loading效果
 import 'nprogress/nprogress.css'
+import './assets/common.css'
 
 setAxios();

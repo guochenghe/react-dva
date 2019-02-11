@@ -8,9 +8,8 @@ export default {
     },
     //异步处理器
     effects:{
-        *getList(payload,{call,put}){
+        *getList({payload},{call,put}){
             const goods = yield call(getGoods);
-            console.log('getGoods result --- ',goods)
             /**
              * goods 数据格式
              * {data:{
@@ -30,6 +29,7 @@ export default {
     reducers:{
         init(state,action){
             const {tags,data} = action.payload;
+
             return {
                 ...state,
                 tags,
